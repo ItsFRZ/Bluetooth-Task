@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/currentStatus"
+            android:layout_alignParentTop="true"
+            android:textSize="18dp"
+            android:text="Status"
+            android:textColor="#30FF39"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/currentFileName"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_below="@id/currentStatus"
+            android:text="Your File Name Here"
+            android:textColor="#BB0D00"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:layout_below="@id/currentFileName"
+            android:id="@+id/bluetoothAnimate"
+            android:layout_height="300dp">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:background="#FBF5F5"
+                    android:id="@+id/listOfDevices"
+                    android:layout_height="match_parent">
+
+                </ListView>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_below="@id/bluetoothAnimate"
+            android:id="@+id/l0"
+            android:textAllCaps="false"
+
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:layout_weight="1"
+                android:text="Audio"
+                android:id="@+id/audioSelect"
+                android:background="@drawable/button_layout"
+                android:textAllCaps="false"
+                android:textColor="#FFF5A1"
+                android:onClick="audioSelect"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:text="Image"
+                android:textAllCaps="false"
+                android:textColor="#FFF5A1"
+                android:id="@+id/imageSelect"
+                android:onClick="imageSelect"
+                android:background="@drawable/button_layout"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_below="@id/l0"
+            android:id="@+id/l1"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:layout_weight="1"
+                android:text="Reset"
+                android:background="@drawable/button_layout"
+                android:id="@+id/resetButton"
+                android:textSize="20dp"
+                android:gravity="center"                android:textAllCaps="false"
+                android:textColor="#FFF5A1"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_layout"
+                android:text="Listen"
+                android:textAllCaps="false"
+                android:id="@+id/listenDevices"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="#FFF5A1"
+                android:layout_height="wrap_content"
+                tools:ignore="OnClick">
+            </Button>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/l1"
+            android:padding="10dp"
+            android:id="@+id/l2"
+            android:layout_height="wrap_content">
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:text="Devices"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="#FFF5A1"
+                android:gravity="center"
+                android:id="@+id/listDevices"
+                android:background="@drawable/button_layout"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_margin="25dp"
+                android:text="Send"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textColor="#FFF5A1"
+                android:id="@+id/send"
+                android:textAllCaps="false"
+                android:background="@drawable/button_layout"
+                android:onClick="sendAllData"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+        </LinearLayout>
+
+
+
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textOn="OFF"
+            android:textOff="ON"
+            android:layout_below="@id/l2"
+            android:background="@drawable/toggle_button_layout"
+            android:id="@+id/bluetoothToggleButton"
+            android:layout_alignParentBottom="true"
+            android:drawableRight="@drawable/bt"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"></ToggleButton>
+
+
+    </RelativeLayout>
+
+</ScrollView>
